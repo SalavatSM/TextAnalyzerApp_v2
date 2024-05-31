@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Analyzer</title>
+</head>
+<body>
+    <h1>Text Analyzer</h1>
+    <form action="{% url 'analyze' %}" method="post">
+        {% csrf_token %}
+        <textarea name="text" rows="10" cols="50" placeholder="Enter your text here..."></textarea><br>
+        <button type="submit">Analyze</button>
+    </form>
+</body>
+</html>
